@@ -1,0 +1,34 @@
+1 Remove duplicates: Duplicates in your dataset can skew training and evaluation results. Use software tools or scripts to detect and remove duplicate images.
+
+2 Check for mislabeled images: Inspect your dataset for any mislabeled or incorrectly labeled images. This could involve manually reviewing a sample of images or using automated techniques to flag potential mislabels.
+
+3 Remove low-quality images: Low-quality images with poor resolution, heavy noise, or significant artifacts may negatively impact model training. Consider setting thresholds for image quality and removing images that fall below these thresholds.
+
+4 Standardize image formats: Ensure that all images in your dataset have the same format and resolution. This will make preprocessing and model training more straightforward.
+
+5 Balance classes: If your dataset contains multiple classes, ensure that the distribution of samples across classes is balanced. If certain classes have significantly fewer samples than others, consider augmenting the dataset or collecting more samples for those classes
+
+6 Handle outliers: Identify and remove outlier images that are significantly different from the rest of the dataset. Outliers may include images with incorrect content or images captured under extreme conditions.
+
+7 Verify data integrity: Check for corrupt or unreadable images in your dataset. Remove any images that are corrupted or cannot be opened.
+
+8 Review annotations: If your dataset includes annotations or labels, verify their accuracy and consistency. Ensure that annotations are correctly aligned with the corresponding images.
+
+9 Remove irrelevant images: Remove any images that are not relevant to the task you're working on. For example, if you're training a model to classify cats and dogs, remove images of other animals or objects.
+
+10 Document cleaning process: Keep track of the steps you've taken to clean your dataset, including any scripts or tools used. Documenting the cleaning process will help ensure reproducibility and facilitate collaboration with others.
+
+
+
+
+
+
+
+Datasets link :
+https://www.kaggle.com/datasets/olyadgetch/wheat-leaf-dataset
+
+https://drive.google.com/drive/folders/1OHKtwD1UrdmhqxrpQEeF_X_pqKotxRGD
+
+
+if data is overfitting
+Data Augementation

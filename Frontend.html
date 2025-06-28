@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheat Diseases</title>
+    <style>
+        body {
+            background-color: black;
+            color: white; 
+        }
+        .container {
+            text-align: center; 
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 250%;
+        }
+        .img {
+            display: block;
+            margin: 0 auto; /* Horizontal centering */
+            width: 75%; /* Ensure the image spans full width */
+            max-width: 500%; /* Ensure the image doesn't exceed its container */
+            height: fit-content; /* Maintain aspect ratio */
+        }
+        .small-img {
+            width: 50%; /* Adjust the width to make it smaller */
+            max-width: 200px; /* Set maximum width to maintain aspect ratio */
+            height: auto; /* Auto adjust height to maintain aspect ratio */
+            margin-top: 20px; /* Add some space between the images */
+            margin-left: 565px;
+        }
+        .class1 {
+            text-align: center; 
+            margin-top: 10px; /* Adjust the margin-top for smaller spacing */
+        }
+        .btn {
+            background-color: whitesmoke;
+            color: black;
+            font-size: 14px; /* Change the font size to your desired value */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wheat Disease</h1>
+    </div>
+    <img src="cover_crops_photo.jpg" alt="" class="img">
+    <div class="class1">
+        <input type="file" id="fileInput" style="display: none;">
+    </div>
+    <div class="class1">
+        <button type="button" class="btn btn-primary" onclick="document.getElementById('fileInput').click()">Browse</button>
+    </div>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+            var file = this.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    var existingImg = document.querySelector('.small-img');
+                    if (existingImg) {
+                        // Replace the existing JavaScript-added image
+                        existingImg.src = event.target.result;
+                    } else {
+                        // Create a new image
+                        var newImg = document.createElement('img');
+                        newImg.src = event.target.result;
+                        newImg.className = 'small-img'; // Use the small-img class for the JavaScript-added image
+                        document.body.appendChild(newImg);
+                    }
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>

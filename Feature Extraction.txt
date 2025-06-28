@@ -1,0 +1,15 @@
+Feature Extraction
+--> Leaf Color:
+
+	Extract color histograms or use color moments to capture the color distribution of the leaves.
+	Consider features such as average color intensity, dominant colors, or color variance.
+
+--> Shape:
+
+	Use contour detection algorithms to extract leaf shapes.
+	Calculate features such as aspect ratio, compactness, or eccentricity to describe leaf shapes.
+
+--> Presence of Lesions:
+
+	Apply segmentation algorithms to detect and quantify lesions or spots on the leaves.
+	Extract features such as lesion count, lesion area distribution, or lesion density.
